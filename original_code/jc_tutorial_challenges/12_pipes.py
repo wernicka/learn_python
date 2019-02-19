@@ -22,8 +22,5 @@ def print_heart(inputs):
 
 print(print_heart(grid))
 
-new_file = open('heart.txt', 'w')
-new_file.write(print_heart(grid))
-new_file.close()
 
-#does this do what the problem intended?
+#type into Terminal: python3 12_pipes.py > heart.txt
