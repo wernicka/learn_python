@@ -14,10 +14,8 @@ with open('names.csv', newline='\n') as file:
         master_list.append(row)
     for i in range(6):
         master_list[i].append(f_names[i])
-        new_data += str(master_list[i]) + '\n'
-#print(new_data)
 
-with open('names_with_f.csv', 'w', newline='\n') as file:
-    writer = csv.writer(file)
-    for row in new_data:
-        writer.writerow(row)
+with open('names_with_f.csv', 'w', newline='') as file:
+   writer = csv.writer(file)
+   for row in master_list:
+       writer.writerow(row)
