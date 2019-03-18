@@ -4,10 +4,13 @@
 
 import sys
 
-if len(sys.argv)>=3:
-    print(f"{sys.argv[1]} is sooooo {sys.argv[2]}!")
-elif len(sys.argv)==2:
-    print(f"{sys.argv[1]} is soooo smart")
-else:
-    print("Amanda is sooooo smart")
+name = "Amanda"
+characteristic = "smart"
 
+if len(sys.argv)==3:
+    name = sys.argv[1]
+    characteristic = sys.argv[2]
+if len(sys.argv)==2:
+    name = sys.argv[1]
+
+print(f"{name} is sooooo {characteristic}!")
