@@ -7,10 +7,10 @@ import sys
 name = "Amanda"
 characteristic = "smart"
 
-if len(sys.argv)==3:
+if len(sys.argv)>=2:
     name = sys.argv[1]
+
+if len(sys.argv)>=3:
     characteristic = sys.argv[2]
-if len(sys.argv)==2:
-    name = sys.argv[1]
 
 print(f"{name} is sooooo {characteristic}!")
