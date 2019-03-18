@@ -10,6 +10,8 @@ user_inputs = sys.argv
 if len(user_inputs)>3:
     print("Please provide only 2 parameters: name and characteristic")
 elif len(user_inputs)==3:
-    print(f"{user_inputs[1]} is sooooo {user_inputs[2]}!")
+    name = user_inputs[1]
+    characteristic = user_inputs[2]
+    print(f"{name} is sooooo {characteristic}!")
 else:
     print("Please provide the name of the person as the first parameter and the characteristic you're praising as the second parameter")
