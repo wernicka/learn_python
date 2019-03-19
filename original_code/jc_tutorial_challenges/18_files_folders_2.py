@@ -8,35 +8,14 @@ from os.path import isfile, join
 
 mypath = "/Users/awernicke/Documents/GitHub/learn_python/original_code/jc_tutorial_challenges/text_files"
 
-#list comprehension from https://stackoverflow.com/questions/3207219/how-do-i-list-all-files-of-a-directory
-#onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-
-#Amey's rewriting of onlyfiles above
-onlyfiles = []
+paths_to_files = []
 files_and_directories = listdir(mypath)
 for file_and_directory_name in files_and_directories:
     path_to_file_or_dir = join(mypath, file_and_directory_name)
-    print("file_and_directory_name = ", file_and_directory_name)
-    print("path_to_file_or_dir = ", path_to_file_or_dir, "\n")
     if isfile(path_to_file_or_dir):
-        onlyfiles.append(file_and_directory_name)
+        paths_to_files.append(path_to_file_or_dir)
 
-
-
-for file in text_files/onlyfiles:
-    # thing = open(file)
-    # content = thing.read()
-    # thing.close()
-    # print(content)
+for file in paths_to_files:
     with open(file) as file:
         content = file.read()
         print(content)
-
-
-# with open('names.csv', newline='\n') as file:
-#     data = csv.reader(file, delimiter=',')
-#     master_list = []
-#     for row in data:
-#         master_list.append(row)
-#     for i in range(6):
-#         master_list[i].append(f_names[i])
