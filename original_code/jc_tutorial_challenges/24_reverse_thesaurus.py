@@ -4,14 +4,15 @@
 # can be translated into that Y value, and then a list of those values.
 
 import csv
+from collections import defaultdict
 
-mydict = {}
+mydict = defaultdict(list)
+#if you use defaultdict you don't have to use setdefault
 
 with open('./csv_files/thesaurus.csv', newline='\n') as csvfile:
     data = csv.reader(csvfile, delimiter=',')
     for row in data:
         #row type is list
-        mydict.setdefault(row[1],[])
         #adds Y as a dictionary key if it's not already a key, with an empty list as the value
         mydict[row[1]].append(row[0])
         #append X to the value list for that Y's key

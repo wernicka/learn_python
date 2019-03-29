@@ -22,6 +22,7 @@ with open(test_file_in, newline='\n') as csvfile:
             C = (row.index("C"))
         if "D" in row:
             D = (row.index("D"))
+#above lines can be eliminated by using csv dictreader, which will read in the column headers as keys.
         row = row[B], row[A], row[D], row[C]
         master_list.append(row)
 
@@ -29,3 +30,4 @@ with open(test_file_out, 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
     for row in master_list:
         writer.writerow(row)
+
